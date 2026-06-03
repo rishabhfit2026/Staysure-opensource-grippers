@@ -1,8 +1,8 @@
 # Staysure OpenSource Grippers
 
-**Vision-Based Dexterous Manipulation Learning System**
+**Vision-Based Humanoid Manipulation Learning System**
 
-A zero-hardware-overhead framework that turns any mounted camera into a full hand-motion capture pipeline — then transfers the learned manipulation skills directly onto robotic grippers.
+A zero-hardware-overhead framework that turns any head-mounted camera into a full hand-motion capture pipeline — then transfers the learned manipulation skills directly onto **humanoid robots** (simulation-first; Unitree G1/H1 and compatible platforms).
 
 ---
 
@@ -66,7 +66,7 @@ No gloves. No motion-capture suits. No specialised hardware beyond a camera you 
 
 ---
 
-## Quickstart (Target)
+## Quickstart
 
 ```bash
 # 1. Clone
@@ -76,14 +76,14 @@ cd Staysure-opensource-grippers
 # 2. Install
 pip install -e ".[dev]"
 
-# 3. Record a session (phone stream or webcam)
-python -m grippers.record --source 0 --output sessions/session_001
+# 3. Record a session (webcam or RTSP phone stream)
+python -m grippers.scripts.record --source 0 --output sessions/session_001 --show
 
-# 4. Process and extract skill primitives
-python -m grippers.process --session sessions/session_001
+# 4. Replay with landmark overlay
+python -m grippers.scripts.visualize --session sessions/session_001
 
-# 5. Transfer to robot
-python -m grippers.deploy --skill sessions/session_001/skills.pkl --robot sim
+# 5. Run tests
+pytest tests/
 ```
 
 ---

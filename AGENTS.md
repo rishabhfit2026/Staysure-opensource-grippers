@@ -6,7 +6,7 @@ This file defines every AI agent operating in this repository, their individual 
 
 ## Project North Star
 
-Build a system where a human wearing a camera can perform any manual task, and a robot with a gripper can reproduce that task — without any additional hardware, markers, or manual annotation.
+Build a system where a human wearing a camera can perform any manual task, and a **humanoid robot** can reproduce that task — without any additional hardware, markers, or manual annotation. Primary target: MuJoCo simulation (Unitree G1 URDF), then real hardware.
 
 Every agent below exists to serve that north star. If a decision does not move the project closer to that goal, it should not be made.
 

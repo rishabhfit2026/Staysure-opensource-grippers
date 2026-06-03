@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Session data and model checkpoints
+sessions/
+models/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# HuggingFace cache
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

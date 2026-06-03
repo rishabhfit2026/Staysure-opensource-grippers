@@ -1,0 +1,19 @@
+camera:
+  source: 0               # int = USB index, string = RTSP URL or file path
+  buffer_size: 4
+
+perception:
+  min_detection_confidence: 0.7
+  min_tracking_confidence: 0.5
+  use_depth: true
+  focal_px: 600.0         # Approximate focal length in pixels for 640x480
+  device: null            # null = auto-detect (cuda if available, else cpu)
+
+recording:
+  output_dir: sessions
+  flush_every: 100
+  jpeg_quality: 80
+
+visualize:
+  show_fps: true
+  window_name: "Grippers — Live"
